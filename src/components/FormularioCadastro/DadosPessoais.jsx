@@ -25,6 +25,7 @@ function DadosPessoais({aoEnviar, validarCPF}) {
         variant="outlined"
         margin="normal"
         fullWidth
+        required
       />
       <TextField
         value={sobrenome}
@@ -36,6 +37,7 @@ function DadosPessoais({aoEnviar, validarCPF}) {
         variant="outlined"
         margin="normal"
         fullWidth
+        required
       />
       <TextField
         value={cpf}
@@ -54,6 +56,7 @@ function DadosPessoais({aoEnviar, validarCPF}) {
         variant="outlined"
         margin="normal"
         fullWidth
+        required
       />
 
       <FormControlLabel

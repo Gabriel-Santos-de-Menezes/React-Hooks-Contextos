@@ -7,26 +7,24 @@ import {Typography} from '@material-ui/core'
 
 
 function FormularioCadastro({ aoEnviar, validarCPF }) {
+  const [etapaAtual, setEtapaAtual ]= useState(0);
 
-  function formularioAtual(etapa){
-    switch(etapa) {
-      case 0:
-        return <DadosUsuario />
-        case 1: 
-        return <DadosPessoais  aoEnviar={aoEnviar} validarCPF={validarCPF} />
-        case 2: 
-        return <DadosEntrega />
-    
-      default:
-        return <Typography>Erro ao selectionar formulário</Typography>
-    }
+  const formularios = [
+    <DadosUsuario aoEnviar={proximo} />,
+    <DadosPessoais  aoEnviar={proximo} validarCPF={validarCPF} />,
+    <DadosEntrega aoEnviar={aoEnviar} />
+  ];
+
+  function proximo(){
+    setEtapaAtual(etapaAtual + 1);
   }
 
-  const [etapaAtual, setEtapaAtual ]= useState(1);
+  
+
   return (
     <>
-
-      {formularioAtual(etapaAtual)}
+      {/* É muito mais fácil trabalhar com array do que com switch para renderização de steps */}
+      {formularios[etapaAtual]}
 
     </>
   );

@@ -9,6 +9,7 @@ function DadosEntrega() {
         type="number"
         variant="outlined"
         margin="normal"
+        required
     
       />
       <TextField
@@ -18,6 +19,7 @@ function DadosEntrega() {
         variant="outlined"
         margin="normal"
         fullWidth
+        required
       />
        <TextField
         id="numero"
@@ -25,6 +27,7 @@ function DadosEntrega() {
         type="number"
         variant="outlined"
         margin="normal"
+        required
         
       />
        <TextField
@@ -33,6 +36,7 @@ function DadosEntrega() {
         type="text"
         variant="outlined"
         margin="normal"
+        required
         
       />
        <TextField
@@ -41,6 +45,7 @@ function DadosEntrega() {
         type="text"
         variant="outlined"
         margin="normal"
+        required
         
       />
        <Button type="submit" variant="contained" color="primary" fullWidth>
